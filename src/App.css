@@ -1,5 +1,10 @@
 .App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .App-logo {
@@ -34,5 +39,35 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+main {
+  flex: 1;
+  padding-top: var(--nav-height);
+  width: 100%;
+}
+
+section {
+  width: 100%;
+}
+
+h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: var(--light);
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  section {
+    padding: 5rem 3rem;
   }
 }

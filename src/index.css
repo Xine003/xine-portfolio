@@ -1,13 +1,197 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #3498db;
+  --dark: #2c3e50;
+  --light: #ecf0f1;
+  --gray: #bdc3c7;
+  --nav-height: 80px; /* Reduced from 96px to 80px (h-20) */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #030712;
+  color: #f9fafb;
+  line-height: 1.6;
+  position: relative;
+}
+
+.parallax-stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: translateZ(0);
+  z-index: 0;
+}
+
+.meteor {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 80px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8));
+  transform: rotate(-45deg);
+  animation: meteor linear forwards;
+  z-index: 1;
+}
+
+@keyframes meteor {
+  0% {
+    transform: translateY(0) translateX(0) rotate(-45deg);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(1000px) translateX(1000px) rotate(-45deg);
+    opacity: 0;
+  }
+}
+
+.star {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: twinkle ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.8;
+    transform: scale(1);
+    filter: blur(0px);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.8);
+    filter: blur(1px);
+  }
+}
+
+.moon-glow {
+  box-shadow: 0 0 60px 30px rgba(255, 255, 255, 0.3);
+  transition: all 0.2s ease;
+  animation: pulse 8s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 60px 30px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 70px 35px rgba(255, 255, 255, 0.4);
+  }
+}
+
+.forest-silhouette {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 25%;
+  background-image: url("./assets/forest-silhouette.svg");
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: contain;
+  z-index: 1;
+  animation: sway 20s ease-in-out infinite;
+}
+
+@keyframes sway {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+}
+
+.bird {
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  background-image: url("./assets/bird-silhouette.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 2;
+  animation: fly 20s linear infinite, bob 2s ease-in-out infinite;
+}
+
+@keyframes fly {
+  0% {
+    transform: translateX(-100px) translateY(0);
+  }
+  100% {
+    transform: translateX(calc(100vw + 100px)) translateY(-50px);
+  }
+}
+
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.section-heading {
+  @apply font-bold relative inline-block;
+  position: relative;
+}
+
+.section-heading::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: #3b82f6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px; /* Increased from 1200px */
+  margin: 0 auto;
+  padding: 0 2rem; /* Increased padding for better spacing */
+}
+
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1800px; /* Even wider for 1920px screens */
+  }
+}
+
+section {
+  padding: 4rem 2rem;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 3rem 1rem;
+  }
 }
