@@ -41,6 +41,12 @@ const Navbar = () => {
               Skills
             </button>
             <button
+              onClick={() => scrollToSection("certifications")}
+              className="text-gray-300 hover:text-blue-500 transition-colors text-xl"
+            >
+              Certificate
+            </button>
+            <button
               onClick={() => scrollToSection("contact")}
               className="text-gray-300 hover:text-blue-500 transition-colors text-xl"
             >
@@ -99,6 +105,12 @@ const Navbar = () => {
                 className="text-gray-300 hover:text-blue-500 transition-colors text-left text-lg"
               >
                 Skills
+              </button>
+              <button
+                onClick={() => scrollToSection("certifications")}
+                className="text-gray-300 hover:text-blue-500 transition-colors text-left text-lg"
+              >
+                Certificate
               </button>
               <button
                 onClick={() => scrollToSection("contact")}

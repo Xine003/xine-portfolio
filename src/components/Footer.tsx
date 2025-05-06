@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Instagram } from "lucide-react"
+import { Github, Linkedin, Instagram } from "lucide-react"
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -24,9 +24,6 @@ const Footer = () => {
               <a href="https://www.instagram.com/x._.ine/" className="hover:text-blue-500 transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="hover:text-blue-500 transition-colors">
-                <Mail size={20} />
-              </a>
             </div>
           </div>
 
@@ -44,6 +41,9 @@ const Footer = () => {
               </a>
               <a href="#skills" className="text-gray-400 hover:text-blue-500 transition-colors">
                 Skills
+              </a>
+              <a href="#certifications" className="text-gray-400 hover:text-blue-500 transition-colors">
+                Certificate
               </a>
               <a href="#contact" className="text-gray-400 hover:text-blue-500 transition-colors">
                 Contact

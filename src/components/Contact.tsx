@@ -79,7 +79,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm text-gray-400">Location</p>
-                  <p className="text-white">Bo. Concepcion Tala Caloocan City</p>
+                  <p className="text-white">Tala Caloocan City</p>
                 </div>
               </div>
 
