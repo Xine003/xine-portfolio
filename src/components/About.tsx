@@ -1,4 +1,6 @@
 import { Github, Linkedin } from "lucide-react"
+import profileImage from "../assets/Profile.jpeg"
+
 
 const About = () => {
   return (
@@ -43,8 +45,8 @@ const About = () => {
               <div className="relative w-48 h-48 md:w-56 md:h-56">
                 <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-3xl"></div>
                 <div className="relative bg-gray-800 rounded-full p-3 border-2 border-blue-500">
-                  <img
-                    src="/placeholder.svg?height=300&width=300"
+                <img
+                    src={profileImage || "/placeholder.svg"}
                     alt="Profile"
                     className="rounded-full w-full h-full object-cover"
                   />

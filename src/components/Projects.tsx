@@ -1,4 +1,7 @@
 import { ExternalLink, Github } from "lucide-react"
+import Clinic from "../assets/Clinic.png"
+import Scanner from "../assets/Scanner.jpg"
+import NaviGaze from "../assets/NaviGaze.png"
 
 interface Project {
   title: string
@@ -12,23 +15,23 @@ const projects: Project[] = [
   {
     title: "Clinic Management System",
     description: "Clinic Management System for a real client, featuring patient record management, visit and check-up tracking, and multi-branch service configuration",
-    image: "/placeholder.svg?height=200&width=400",
+    image: Clinic,
     tags: ["React", "Java Springboot", "MySQL", "Typescript"],
-    codeLink: "#",
+    codeLink: "https://github.com/Xine003/clinic-management-system/tree/main",
   },
   {
     title: "Network Scanner Application",
     description: " Python-based network scanner using Nmap on Ubuntu Linux to detect active hosts, open ports, and running services within a local network, automating scans and parsing results for simplified analysis.",
-    image: "/placeholder.svg?height=200&width=400",
+    image: Scanner,
     tags: ["Python", "Linux", "Nmap"],
-    codeLink: "#",
+    codeLink: "https://github.com/Xine003/NetworkScanner-Nmap",
   },
   {
     title: "NaviGaze",
     description: "A mobile indoor navigation app for the University of Caloocan City, including student schedule integration, user profile and avatar management, and backend logic for role-based dashboards for Students and Professors.",
-    image: "/placeholder.svg?height=200&width=400",
+    image: NaviGaze,
     tags: ["C#", "Unity", "Firebase"],
-    codeLink: "#",
+    codeLink: "https://github.com/Xine003/NaviGaze-Indoor-Navigation",
   },
 ]
 

@@ -53,8 +53,8 @@ const Contact = () => {
             <p className="text-gray-400 mb-6">Feel free to reach out to me through any of these channels</p>
 
             <div className="space-y-6">
-              <div className="flex items-center gap-4">
-                <div className="bg-gray-800 p-3 rounded-full">
+              <div className="flex items-start gap-4">
+                <div className="bg-gray-800 p-3 rounded-full mt-1">
                   <Mail className="h-5 w-5 text-blue-500" />
                 </div>
                 <div>
@@ -63,8 +63,8 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4">
-                <div className="bg-gray-800 p-3 rounded-full">
+              <div className="flex items-start gap-4">
+                <div className="bg-gray-800 p-3 rounded-full mt-1">
                   <Phone className="h-5 w-5 text-blue-500" />
                 </div>
                 <div>
@@ -73,8 +73,8 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4">
-                <div className="bg-gray-800 p-3 rounded-full">
+              <div className="flex items-start gap-4">
+                <div className="bg-gray-800 p-3 rounded-full mt-1">
                   <MapPin className="h-5 w-5 text-blue-500" />
                 </div>
                 <div>
