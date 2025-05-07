@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react"
-import { ArrowDown } from "lucide-react"
+import { ArrowDown, FileDown } from "lucide-react"
+import CV from "../assets/CV.pdf"
 
 interface MeteorShower {
   id: number
@@ -17,6 +18,16 @@ const Hero = () => {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" })
     }
+  }
+
+  const downloadCV = () => {
+    // Create an anchor element and trigger download
+    const link = document.createElement("a")
+    link.href = CV
+    link.download = "CV.pdf"
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
   }
 
   useEffect(() => {
@@ -155,10 +166,11 @@ const Hero = () => {
             View My Work
           </button>
           <button
-            onClick={() => scrollToSection("contact")}
-            className="border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white px-6 py-3 rounded-md text-lg font-medium"
+            onClick={downloadCV}
+            className="border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white px-6 py-3 rounded-md text-lg font-medium flex items-center justify-center gap-2"
           >
-            Contact Me
+            Download CV
+            <FileDown className="h-5 w-5" />
           </button>
         </div>
 

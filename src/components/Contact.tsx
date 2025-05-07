@@ -53,31 +53,31 @@ const Contact = () => {
             <p className="text-gray-400 mb-6">Feel free to reach out to me through any of these channels</p>
 
             <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="bg-gray-800 p-3 rounded-full mt-1">
+            <div className="grid grid-cols-[48px_1fr] items-start">
+            <div className="bg-gray-800 p-3 rounded-full flex items-center justify-center">
                   <Mail className="h-5 w-5 text-blue-500" />
                 </div>
-                <div>
+                <div className="flex flex-col">
                   <p className="text-sm text-gray-400">Email</p>
-                  <p className="text-white">orias.franxine@gmail.com</p>
+                  <p className="text-white break-words">orias.franxine@gmail.com</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="bg-gray-800 p-3 rounded-full mt-1">
+              <div className="grid grid-cols-[48px_1fr] items-start">
+                <div className="bg-gray-800 p-3 rounded-full flex items-center justify-center">
                   <Phone className="h-5 w-5 text-blue-500" />
                 </div>
-                <div>
+                <div className="flex flex-col">
                   <p className="text-sm text-gray-400">Phone</p>
                   <p className="text-white">09684522678</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="bg-gray-800 p-3 rounded-full mt-1">
+              <div className="grid grid-cols-[48px_1fr] items-start">
+                <div className="bg-gray-800 p-3 rounded-full flex items-center justify-center">
                   <MapPin className="h-5 w-5 text-blue-500" />
                 </div>
-                <div>
+                <div className="flex flex-col">
                   <p className="text-sm text-gray-400">Location</p>
                   <p className="text-white">Tala Caloocan City</p>
                 </div>

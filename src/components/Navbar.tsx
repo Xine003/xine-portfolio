@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Github, Linkedin, FileText, Menu, X } from "lucide-react"
+import CV from "../assets/CV.pdf"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -10,6 +11,16 @@ const Navbar = () => {
       element.scrollIntoView({ behavior: "smooth" })
       setIsOpen(false)
     }
+  }
+
+  const downloadCV = () => {
+    // Create an anchor element and trigger download
+    const link = document.createElement("a")
+    link.href = CV
+    link.download = "CV.pdf"
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
   }
 
   return (
@@ -72,9 +83,9 @@ const Navbar = () => {
             >
               <Linkedin size={24} />
             </a>
-            <button className="flex items-center gap-2 border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white px-4 py-2 rounded-md text-lg font-medium transition-colors">
+            <button onClick={downloadCV} className="flex items-center gap-2 border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white px-4 py-2 rounded-md text-lg font-medium transition-colors">
               <FileText size={20} />
-              Resume
+              CV
             </button>
           </div>
 

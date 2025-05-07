@@ -52,7 +52,7 @@ const Projects = () => {
                 <img
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  className="w-full h-full object-contain bg-gray-900 p-2"
                 />
               </div>
 
