@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-import Cybersecurity from "../assets/cybersecurity.png"
+import Cybersecurity from "../assets/Cybersecurity.png"
 import Cisco1 from "../assets/Cisco1.png"
 import Cisco2 from "../assets/Cisco2.png"
 import Cisco3 from "../assets/Cisco3.png"
