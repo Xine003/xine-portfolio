@@ -53,20 +53,28 @@ const Certifications = () => {
       <div className="container mx-auto px-8">
         <h2 className="section-heading text-5xl mb-16 text-center mx-auto">Certifications</h2>
 
-        <div className="max-w-[75%] mx-auto">
+        <div className="w-full max-w-4xl mx-auto px-4 sm:px-6">
           <div className="relative h-[400px] md:h-[500px]">
             {/* Carousel container */}
             <div className="relative h-full w-full overflow-hidden rounded-xl border border-gray-800">
-              {/* Current slide */}
-              <div
-                className="h-full w-full flex items-center justify-center bg-gray-800 transition-opacity duration-500"
-                style={{ opacity: 1 }}
-              >
-                <img
-                  src={certificationImages[currentIndex] || "/placeholder.svg"}
-                  alt={`Certification ${currentIndex + 1}`}
-                  className="max-h-full max-w-full object-contain p-4"
-                />
+              {/* Carousel with animation */}
+              <div className="h-full w-full relative overflow-hidden">
+                {certificationImages.map((image, index) => (
+                  <div
+                    key={index}
+                    className="absolute inset-0 flex items-center justify-center bg-gray-800 transition-all duration-500 ease-in-out"
+                    style={{
+                      transform: `translateX(${(index - currentIndex) * 100}%)`,
+                      opacity: index === currentIndex ? 1 : 0.7,
+                    }}
+                  >
+                    <img
+                      src={image || "/placeholder.svg"}
+                      alt={`Certification ${index + 1}`}
+                      className="max-h-full max-w-full object-contain p-4"
+                    />
+                  </div>
+                ))}
               </div>
 
               {/* Navigation arrows */}

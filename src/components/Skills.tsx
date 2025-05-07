@@ -33,18 +33,17 @@ const skillCategories: SkillCategory[] = [
     icon: <Shield className="h-10 w-10 text-blue-500" />,
     skills: ["Networking", "Firewall", "Nmap", "Wireshark"],
   },
-
 ]
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-32 bg-gray-900">
+    <section id="skills" className="py-16 md:py-32 bg-gray-900">
       {/* Changed the section background to gray-900 to make it the container */}
       <div className="container mx-auto px-8">
         <h2 className="section-heading text-5xl mb-16 text-center mx-auto">My Skills</h2>
 
         {/* Removed the background container and kept just the grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[75%] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-4xl mx-auto px-4 sm:px-6">
           {skillCategories.map((category, index) => (
             <div
               key={index}

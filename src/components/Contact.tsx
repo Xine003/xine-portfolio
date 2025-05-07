@@ -57,43 +57,43 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="py-20 bg-gray-950">
+    <section id="contact" className="py-16 md:py-20 bg-gray-950">
       <div className="container mx-auto px-4">
         <h2 className="section-heading">Get In Touch</h2>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-[60%] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl mx-auto px-4 sm:px-6">
           <div className="bg-gray-900 border border-gray-800 rounded-lg p-6">
             <h3 className="text-xl text-white font-semibold mb-2">Contact Information</h3>
             <p className="text-gray-400 mb-6">Feel free to reach out to me through any of these channels</p>
 
             <div className="space-y-6">
-              <div className="grid grid-cols-[48px_1fr] items-start">
+            <div className="grid grid-cols-[40px_1fr] items-start gap-3">
                 <div className="bg-gray-800 p-3 rounded-full flex items-center justify-center">
                   <Mail className="h-5 w-5 text-blue-500" />
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col overflow-hidden">
                   <p className="text-sm text-gray-400">Email</p>
-                  <p className="text-white break-words">orias.franxine@gmail.com</p>
+                  <p className="text-white break-all">orias.franxine@gmail.com</p>
                 </div>
               </div>
 
-              <div className="grid grid-cols-[48px_1fr] items-start">
+              <div className="grid grid-cols-[40px_1fr] items-start gap-3">
                 <div className="bg-gray-800 p-3 rounded-full flex items-center justify-center">
                   <Phone className="h-5 w-5 text-blue-500" />
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col overflow-hidden">
                   <p className="text-sm text-gray-400">Phone</p>
-                  <p className="text-white">09684522678</p>
+                  <p className="text-white break-all">09684522678</p>
                 </div>
               </div>
 
-              <div className="grid grid-cols-[48px_1fr] items-start">
+              <div className="grid grid-cols-[40px_1fr] items-start gap-3">
                 <div className="bg-gray-800 p-3 rounded-full flex items-center justify-center">
                   <MapPin className="h-5 w-5 text-blue-500" />
                 </div>
                 <div className="flex flex-col">
                   <p className="text-sm text-gray-400">Location</p>
-                  <p className="text-white">Tala Caloocan City</p>
+                  <p className="text-white break-all">Tala Caloocan City</p>
                 </div>
               </div>
 
