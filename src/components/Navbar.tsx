@@ -1,3 +1,5 @@
+"use client"
+
 import { useState } from "react"
 import { Github, Linkedin, FileText, Menu, X } from "lucide-react"
 import CV from "../assets/CV.pdf"
@@ -83,7 +85,10 @@ const Navbar = () => {
             >
               <Linkedin size={24} />
             </a>
-            <button onClick={downloadCV} className="flex items-center gap-2 border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white px-4 py-2 rounded-md text-lg font-medium transition-colors">
+            <button
+              onClick={downloadCV}
+              className="flex items-center gap-2 border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white px-4 py-2 rounded-md text-lg font-medium transition-colors"
+            >
               <FileText size={20} />
               CV
             </button>
@@ -96,8 +101,12 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu */}
-        {isOpen && (
-          <div className="md:hidden pt-4 pb-2">
+        <div
+          className={`md:hidden fixed left-0 right-0 top-20 bg-black/90 backdrop-blur-md border-b border-gray-800 overflow-hidden transition-all duration-300 ease-in-out ${
+            isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <div className="container mx-auto px-8 py-4">
             <nav className="flex flex-col space-y-4">
               <button
                 onClick={() => scrollToSection("about")}
@@ -146,10 +155,16 @@ const Navbar = () => {
                 >
                   <Linkedin size={22} />
                 </a>
+                <button
+                  onClick={downloadCV}
+                  className="text-gray-300 hover:text-blue-500 transition-colors"                >
+                  <FileText size={20} />
+                  CV
+                </button>
               </div>
             </nav>
           </div>
-        )}
+        </div>
       </div>
     </header>
   )
