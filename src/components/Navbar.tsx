@@ -1,8 +1,6 @@
-"use client"
-
 import { useState } from "react"
 import { Github, Linkedin, FileText, Menu, X } from "lucide-react"
-import CV from "../assets/CV.pdf"
+import CV from "../assets/OriasCV.pdf"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -19,7 +17,7 @@ const Navbar = () => {
     // Create an anchor element and trigger download
     const link = document.createElement("a")
     link.href = CV
-    link.download = "CV.pdf"
+    link.download = "OriasCV.pdf"
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
