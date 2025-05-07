@@ -1,14 +1,32 @@
-"use client"
-
 import { useState } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import Cybersecurity from "../assets/cybersecurity.png"
+import Cisco1 from "../assets/Cisco1.png"
+import Cisco2 from "../assets/Cisco2.png"
+import Cisco3 from "../assets/Cisco3.png"
+import IBM from "../assets/IBM.png"
+import DICT001 from "../assets/DICT001.png"
+import DICT004 from "../assets/DICT004.png"
+import DICT006 from "../assets/DICT006.png"
+import DICT014 from "../assets/DICT014.png"
+import DICT015 from "../assets/DICT015.png"
+import DICT016 from "../assets/DICT016.png"
+import DICT018 from "../assets/DICT018.png"
 
 // Simple array of certification images
 const certificationImages = [
-  "/placeholder.svg?height=500&width=700",
-  "/placeholder.svg?height=500&width=700",
-  "/placeholder.svg?height=500&width=700",
-  "/placeholder.svg?height=500&width=700",
+  Cybersecurity,
+  Cisco1,
+  Cisco2,
+  Cisco3,
+  IBM,
+  DICT001,
+  DICT004,
+  DICT006,
+  DICT014,
+  DICT015,
+  DICT016,
+  DICT018,
 ]
 
 const Certifications = () => {
